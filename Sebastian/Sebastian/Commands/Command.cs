@@ -10,13 +10,13 @@ namespace Sebastian
     public class Command
     {
         public string Description;
-        public string Name;
-        public Action<Message> command;
-        public void Call(Message message)
+        public AliasString Name;
+        public Action<Result> command;
+        public void Call(Result message)
         {
             command?.Invoke(message);
         }
-        public async Task CallAsync(Message message)
+        public async Task CallAsync(Result message)
         {
             await Task.Run(() => Call(message));
         }

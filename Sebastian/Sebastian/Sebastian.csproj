@@ -56,11 +56,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\AliasString.cs" />
     <Compile Include="Commands\CallbackCommands.cs" />
     <Compile Include="Commands\Command.cs" />
-    <Compile Include="Commands\ICommanders.cs" />
+    <Compile Include="Commands\CommandsBase.cs" />
+    <Compile Include="Commands\ICommands.cs" />
     <Compile Include="Commands\InlineCommands.cs" />
     <Compile Include="Commands\MessageCommands.cs" />
+    <Compile Include="Commands\Result.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
