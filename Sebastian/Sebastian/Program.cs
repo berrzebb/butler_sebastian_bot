@@ -11,7 +11,7 @@ namespace Sebastian
 {
     internal class Sebastian
     {
-        public static readonly TelegramBotClient Bot = new TelegramBotClient("285067809:AAGKEGiNYp5MOLEDFHxKZE47dBzzzfE09Sk");
+        public static readonly TelegramBotClient Bot = new TelegramBotClient(Settings.Default.APIKey);
         public IDictionary<UpdateType,ICommands> Commands = new Dictionary<UpdateType,ICommands>();
         public Sebastian()
         {
