@@ -20,6 +20,7 @@ namespace Sebastian
         {
             this.CurrentBot = bot;
         }
+        protected void RegisterCommand(string Name, string Description, Action<Result> command) => RegisterCommand(new string[] { Name }, Description, command);
         protected void RegisterCommand(string[] Name, string Description, Action<Result> command)
         {
             AliasString Key = new AliasString(Name);

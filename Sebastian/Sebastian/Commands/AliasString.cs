@@ -14,6 +14,11 @@ namespace Sebastian
         {
             this.strings = strings.ToList();
         }
+        public AliasString(string str)
+        {
+            this.strings = Enumerable.Empty<string>().ToList();
+            strings.Add(str);
+        }
         public bool Contains(string s)
         {
             return strings.Contains(s);

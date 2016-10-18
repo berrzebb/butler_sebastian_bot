@@ -15,9 +15,9 @@ namespace Sebastian
         public MessageCommands(ITelegramBotClient Bot) : base(Bot)
         {
             RegisterCommand(new string[] { "세바스찬", "바틀러", "집사", "Sebastian" }, "부르셨습니까 주인님", CallButler);
-            RegisterCommand(new string[]{ "/도움말"}, "도움말을 보여드립니다.", ShowHelp);
-            RegisterCommand(new string[] { "/찾아줘", "/검색" },"정보를 찾아드립니다.", Search);
-            RegisterCommand(new string[]{ "/드래곤슬레이브"}, "스펠을 사용합니다(?!)", DragonSlave);
+            RegisterCommand("/도움말", "도움말을 보여드립니다.", ShowHelp);
+            RegisterCommand(new string[]{"/찾아줘", "/검색" },"정보를 찾아드립니다.", Search);
+            RegisterCommand("/드래곤슬레이브", "스펠을 사용합니다(?!)", DragonSlave);
 
         }
         public override async void RaiseCommand(object sender, object result) => await OnMessageReceived(sender, new Result() { data = result });
